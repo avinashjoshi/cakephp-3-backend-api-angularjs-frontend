@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <base href="/">
+    <title>Blob: A open microblogging service</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="keywords" content="blob, blog, microblog">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="bower_components/toastr/toastr.min.css"/>
+
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+<body ng-controller="AppCtrl as rootVm">
+    <!--[if lt IE 7]>
+
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+        your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="container">
+      <div data-ng-include="'tpl/header.html'"></div>
+      <ui-view>
+      <div data-ng-include="'tpl/footer.html'"></div>
+    </div> <!-- /container -->
+
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="bower_components/toastr/toastr.min.js"></script>
+
+    <script src="scripts/app.module.js"></script>
+    <script src="scripts/app.factory.js"></script>
+    <script src="scripts/app.controller.js"></script>
+    <script src="scripts/config.router.js"></script>
+    <script src="components/home/homeController.js"></script>
+</body>
+</html>

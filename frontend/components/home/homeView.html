@@ -1,0 +1,19 @@
+<div class="jumbotron">
+  <form>
+    <textarea type="text" autocomplete="off" class="form-control" placeholder="What would you like to blob about?" ng-model="vm.blobText"></textarea>
+    <span ng-show="vm.blobText.length > 0">{{vm.blobText.length}} {{vm.blobText.length > 1 ? 'characters' : 'character'}}</span>
+    <button type="submit" class="btn btn-primary pull-right" ng-click="vm.blobIt()">Blob it!</button>
+  </form>
+  <div class="clearfix"></div>
+</div>
+<div class="row marketing">
+  <div class="col-lg-12 text-center" ng-show="vm.loading">
+    <i class="fa fa-spin fa-spinner fa-2x"></i>
+  </div>
+  <div class="col-lg-12" ng-hide="vm.loading">
+    <div ng-repeat="blob in vm.blobs">
+      <h4>{{blob.blob_text}}</h4>
+      <p>{{blob.created}} <button class="btn btn-xs btn-default" ng-click="vm.deleteBlob(blob.id)"><i class="fa fa-trash"></i></button></p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+/.phpintel
+
+#Backend - CakePHP
+/backend/vendor/*
+/backend/config/app.php
+/backend/tmp/*
+/backend/logs/*
+
+#Frontend - AngularJS
+/frontend/bower_components
